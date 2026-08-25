@@ -182,9 +182,8 @@
 
   /* clickable project cards */
   .proj-card-link{display:block;color:inherit;text-decoration:none;height:100%;}
-  .burger-visual{height:220px;border-bottom:1px solid var(--hair-strong);background:linear-gradient(135deg,#102c3d,#173f52);display:flex;align-items:center;justify-content:center;}
-  .burger-stack{width:72%;display:flex;flex-direction:column;gap:8px;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:#eef7fa;}
-  .burger-stack span{padding:13px 8px;border:1px solid rgba(227,172,92,.55);background:rgba(9,27,40,.55);}
+  .burger-visual{height:260px;border-bottom:1px solid var(--hair-strong);background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .burger-visual img{width:100%;height:100%;object-fit:contain;display:block;}
 
   .proj-card-link:hover .proj-card{border-color:var(--amber);transform:translateY(-2px);transition:transform .18s ease,border-color .18s ease;}
   .project-link{display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--amber);letter-spacing:.04em;text-decoration:none;}
@@ -247,7 +246,7 @@
 <p class="lede">A selection of robotics, mechanical design, simulation, and engineering projects. Click into a project to see what I built, what I worked on, and how it performed.</p>
 <div class="proj-grid">
 <a aria-label="View Autonomous Burger Robot project" class="proj-card-link" href="burger-robot.html"><div class="proj-card">
-<div class="burger-visual" aria-hidden="true"><div class="burger-stack"><span>TOP BUN</span><span>PERCEPTION</span><span>ROBOTIC ARM</span><span>MOBILE BASE</span></div></div>
+<div class="burger-visual"><img src="./robot_whiteback.jpg" alt="Autonomous Burger Robot" /></div>
 <div class="proj-body">
 <span class="proj-tag">Robotics · Autonomous Systems</span>
 <h3>Autonomous Burger Robot</h3>

@@ -202,11 +202,26 @@
   .masthead nav a.active{color:var(--amber);}
   @media (max-width:820px){ .masthead nav{display:none;} }
 
+
+  /* EXACT INDEX HEADER */
+  .masthead{
+    position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between;
+    padding:14px 34px; background:rgba(9,27,40,0.86); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--hair); font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.06em;
+  }
+  .masthead .name{color:var(--line); font-weight:600;}
+  .masthead .name span{color:var(--line-dim); font-weight:400;}
+  .masthead nav{display:flex;}
+  .masthead nav a{color:var(--line-dim); text-decoration:none; text-transform:uppercase; margin-right:22px;}
+  .masthead nav a:last-child{margin-right:0;}
+  .masthead nav a:hover{color:var(--amber);}
+  @media (max-width:820px){ .masthead nav{display:none;} }
+  .masthead nav a.active{color:var(--amber);}
 </style>
-</head><body>
-<div class="masthead">
+</head><body><div class="masthead">
 <div class="name">MIHIR KULKARNI <span>/// ENGINEERING PORTFOLIO</span></div>
 <nav><a href="index.html#projects" class="active">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#nuevo">NUEVO</a><a href="index.html#skills">Skills</a><a href="index.html#education">Education</a></nav>
+</div><nav><a href="index.html#projects" class="active">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#nuevo">NUEVO</a><a href="index.html#skills">Skills</a><a href="index.html#education">Education</a></nav>
 </div>
 <main>
 <section class="sheet">
