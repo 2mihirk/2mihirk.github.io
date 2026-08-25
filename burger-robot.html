@@ -121,8 +121,8 @@
   .job .see-also a{color:var(--cyan);}
 
   /* featured flagship */
-  .flagship{border:1px solid var(--hair-strong); display:grid; grid-template-columns:1fr 1fr; overflow:hidden;}
-  @media (max-width:900px){ .flagship{grid-template-columns:1fr;} }
+  .flagship{border:1px solid var(--hair-strong); display:grid; grid-template-columns:minmax(0,0.88fr) minmax(0,1.12fr); column-gap:28px; overflow:hidden;}
+  @media (max-width:900px){ .flagship{grid-template-columns:1fr;row-gap:0;} .burger-visual{border-right:0;border-bottom:1px solid var(--hair-strong);min-height:380px;} .burger-visual img{max-width:72%;max-height:360px;} .proj-body[style]{padding:30px 28px 34px !important;} }
   .flagship img{width:100%; height:100%; object-fit:cover; display:block;}
   .flagship-body{padding:32px; display:flex; flex-direction:column; justify-content:center;}
   .flagship-tag{font-family:var(--font-mono); font-size:11px; color:var(--amber); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:14px;}
@@ -176,28 +176,44 @@
 
   /* clickable project cards */
   .proj-card-link{display:block;color:inherit;text-decoration:none;height:100%;}
-  .burger-visual{height:100%;min-height:360px;border-right:1px solid var(--hair-strong);background:#f6f8f9;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-  .burger-visual img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f6f8f9;}
+  .burger-visual{min-height:430px;background:#f6f8f9;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:28px;border-right:1px solid var(--hair-strong);}
+  .burger-visual img{width:auto;height:auto;max-width:82%;max-height:390px;object-fit:contain;object-position:center;background:#f6f8f9;display:block;}
 
   .proj-card-link:hover .proj-card{border-color:var(--amber);transform:translateY(-2px);transition:transform .18s ease,border-color .18s ease;}
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
   .two-col h3,.sheet h3{font-family:var(--font-display);font-size:1.35rem;margin:0 0 12px;color:var(--line);}
   .two-col p,.sheet>section p{font-size:14.5px;color:var(--line-dim);}
-  @media (max-width:820px){.two-col{grid-template-columns:1fr;gap:26px;}.masthead{padding:13px 20px}.masthead nav a{margin-right:12px;font-size:11px}.burger-visual{min-height:320px;border-right:0;border-bottom:1px solid var(--hair-strong);}}
+  @media (max-width:820px){.two-col{grid-template-columns:1fr;gap:26px;}.masthead{padding:13px 20px}.masthead nav a{margin-right:12px;font-size:11px}.burger-visual{min-height:320px;border-right:0;border-bottom:1px solid var(--hair-strong);padding:20px}.burger-visual img{max-width:78%;max-height:300px;}}
   .project-link{display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--amber);letter-spacing:.04em;text-decoration:none;}
   .project-link:hover{text-decoration:underline;}
+
+  /* Shared portfolio header — matches index.html */
+  .masthead{
+    position:sticky; top:0; z-index:20; display:flex; align-items:center; justify-content:space-between;
+    padding:14px 34px; background:rgba(9,27,40,0.86); backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--hair); font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.06em;
+  }
+  .masthead .name{color:var(--line); font-weight:600;}
+  .masthead .name span{color:var(--line-dim); font-weight:400;}
+  .masthead nav{display:flex;}
+  .masthead nav a{color:var(--line-dim); text-decoration:none; text-transform:uppercase; margin-right:22px;}
+  .masthead nav a:last-child{margin-right:0;}
+  .masthead nav a:hover{color:var(--amber);}
+  .masthead nav a.active{color:var(--amber);}
+  @media (max-width:820px){ .masthead nav{display:none;} }
+
 </style>
 </head><body>
-<nav class="masthead">
-  <div class="name">MIHIR KULKARNI <span>/// ENGINEERING PORTFOLIO</span></div>
-  <div class="nav"><a href="./index.html#projects" class="active">Projects</a><a href="./index.html#experience">Experience</a><a href="./index.html#skills">Skills</a><a href="./index.html#education">Education</a></div>
-</nav>
+<div class="masthead">
+<div class="name">MIHIR KULKARNI <span>/// ENGINEERING PORTFOLIO</span></div>
+<nav><a href="index.html#projects" class="active">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#nuevo">NUEVO</a><a href="index.html#skills">Skills</a><a href="index.html#education">Education</a></nav>
+</div>
 <main>
 <section class="sheet">
 <div class="sheet-head"><div><span class="sheet-no">PROJECT 02</span><h2>Autonomous Burger Robot</h2></div><div class="titleblock"><div class="k">Type</div><div class="v">Robotics</div><div class="k">Focus</div><div class="v">Autonomy + Manipulation</div><div class="k">Rev</div><div class="v">Final</div></div></div>
 <div class="flagship">
 <div class="burger-visual"><img src="./robot_whiteback.jpg" alt="Autonomous Burger Robot" /></div>
-<div class="proj-body" style="padding:28px 0 0">
+<div class="proj-body" style="padding:42px 38px 38px 8px; min-width:0">
 <span class="proj-tag">Robotics · Autonomous Systems · Embedded Vision</span>
 <h1 class="title" style="font-size:clamp(2.4rem,6vw,4.5rem);margin:10px 0 18px">Burger Robot</h1>
 <p class="dek">An autonomous mobile robot that combined navigation, perception, manipulation, and mechanical design into one system.</p>
