@@ -48,6 +48,7 @@
   .masthead nav a{color:var(--line-dim); text-decoration:none; text-transform:uppercase; margin-right:22px;}
   .masthead nav a:last-child{margin-right:0;}
   .masthead nav a:hover{color:var(--amber);}
+  .masthead nav a.active{color:var(--amber);}
   @media (max-width:820px){ .masthead nav{display:none;} }
 
   main, header.hero, footer.colophon{ padding:0 clamp(20px,5vw,64px); }
@@ -175,21 +176,27 @@
 
   /* clickable project cards */
   .proj-card-link{display:block;color:inherit;text-decoration:none;height:100%;}
-  .burger-visual{height:220px;border-bottom:1px solid var(--hair-strong);background:linear-gradient(135deg,#102c3d,#173f52);display:flex;align-items:center;justify-content:center;}
-  .burger-stack{width:72%;display:flex;flex-direction:column;gap:8px;text-align:center;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;color:#eef7fa;}
-  .burger-stack span{padding:13px 8px;border:1px solid rgba(227,172,92,.55);background:rgba(9,27,40,.55);}
+  .burger-visual{height:100%;min-height:360px;border-right:1px solid var(--hair-strong);background:#f6f8f9;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .burger-visual img{width:100%;height:100%;object-fit:contain;object-position:center;background:#f6f8f9;}
 
   .proj-card-link:hover .proj-card{border-color:var(--amber);transform:translateY(-2px);transition:transform .18s ease,border-color .18s ease;}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  .two-col h3,.sheet h3{font-family:var(--font-display);font-size:1.35rem;margin:0 0 12px;color:var(--line);}
+  .two-col p,.sheet>section p{font-size:14.5px;color:var(--line-dim);}
+  @media (max-width:820px){.two-col{grid-template-columns:1fr;gap:26px;}.masthead{padding:13px 20px}.masthead nav a{margin-right:12px;font-size:11px}.burger-visual{min-height:320px;border-right:0;border-bottom:1px solid var(--hair-strong);}}
   .project-link{display:inline-block;margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--amber);letter-spacing:.04em;text-decoration:none;}
   .project-link:hover{text-decoration:underline;}
 </style>
 </head><body>
-<nav><a href="./index.html#projects">Projects</a><a href="./index.html#experience">Experience</a><a href="./index.html#skills">Skills</a><a href="./index.html#education">Education</a></nav>
+<nav class="masthead">
+  <div class="name">MIHIR KULKARNI <span>/// ENGINEERING PORTFOLIO</span></div>
+  <div class="nav"><a href="./index.html#projects" class="active">Projects</a><a href="./index.html#experience">Experience</a><a href="./index.html#skills">Skills</a><a href="./index.html#education">Education</a></div>
+</nav>
 <main>
 <section class="sheet">
 <div class="sheet-head"><div><span class="sheet-no">PROJECT 02</span><h2>Autonomous Burger Robot</h2></div><div class="titleblock"><div class="k">Type</div><div class="v">Robotics</div><div class="k">Focus</div><div class="v">Autonomy + Manipulation</div><div class="k">Rev</div><div class="v">Final</div></div></div>
 <div class="flagship">
-<div class="burger-visual" style="height:300px"><div class="burger-stack"><span>MOBILE NAVIGATION</span><span>LIDAR PERCEPTION</span><span>OPENCV VISION</span><span>MULTI-DOF ARM</span></div></div>
+<div class="burger-visual"><img src="./robot_whiteback.jpg" alt="Autonomous Burger Robot" /></div>
 <div class="proj-body" style="padding:28px 0 0">
 <span class="proj-tag">Robotics · Autonomous Systems · Embedded Vision</span>
 <h1 class="title" style="font-size:clamp(2.4rem,6vw,4.5rem);margin:10px 0 18px">Burger Robot</h1>
